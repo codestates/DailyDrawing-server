@@ -10,13 +10,13 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.User.hasMany(models.Drawing, {
-        foreignKey: "User_Id",
+        foreignKey: "Users_Id",
       });
       models.User.hasMany(models.Comments, {
-        foreignKey: "User_Id",
+        foreignKey: "Users_Id",
       });
       models.User.hasMany(models.Like, {
-        foreignKey: "User_Id",
+        foreignKey: "Users_Id",
       });
     }
   }

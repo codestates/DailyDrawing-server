@@ -23,7 +23,7 @@ module.exports = {
         type: Sequelize.STRING,
       },
       profileImg: {
-        allowNull: ture,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       createdAt: {
