@@ -15,6 +15,13 @@ app.use(
   })
 );
 
+app.use("/image/get", express.static("uploads/images"));
+app.use("/profile/get", express.static("uploads/profileImgs"));
+
+//파일 업로드
+const uploadImage = require("./middlewares/getImage");
+const uploadProfileImg = require("./middlewares/profileImg");
+
 //라우트 분기
 
 //응답 잘가는 지 확인
