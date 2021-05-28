@@ -23,6 +23,9 @@ const uploadImage = require("./middlewares/getImage");
 const uploadProfileImg = require("./middlewares/profileImg");
 
 //라우트 분기
+const signRouter = require("./routes/sign");
+
+app.use("/sign", signRouter);
 
 //응답 잘가는 지 확인
 app.get("/", (req, res) => {
