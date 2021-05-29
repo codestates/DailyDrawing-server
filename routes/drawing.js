@@ -5,7 +5,7 @@ const getImage = require("../middlewares/getImage");
 const checkTokenValid = require("../middlewares/checkTokenValid");
 
 router.post("/upload", checkTokenValid, getImage, controller.drawingUpload);
-router.patch("/update", controller.drawingUpdate);
+router.patch("/update", checkTokenValid, getImage, controller.drawingUpdate);
 router.delete("/delete", controller.drawingDelete);
 
 module.exports = router;
