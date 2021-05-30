@@ -5,5 +5,6 @@ const checkTokenValid = require("../middlewares/checkTokenValid");
 
 router.post("/up", checkTokenValid, controller.likeUp);
 router.delete("/down", checkTokenValid, controller.likeDown);
+router.get("/count/:id", controller.likeCount);
 
 module.exports = router;
