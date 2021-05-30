@@ -1,5 +1,4 @@
 const { Drawing } = require("../../models");
-console.log(Drawing);
 
 module.exports = async (req, res) => {
   // console.log(req.file);
