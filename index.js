@@ -26,10 +26,12 @@ const uploadProfileImg = require("./middlewares/profileImg");
 const signRouter = require("./routes/sign");
 const drawingRouter = require("./routes/drawing");
 const likeRouter = require("./routes/like");
+const commentsRouter = require("./routes/comments");
 
 app.use("/sign", signRouter);
 app.use("/drawing", drawingRouter);
 app.use("/like", likeRouter);
+app.use("/comments", commentsRouter);
 
 //응답 잘가는 지 확인
 app.get("/", (req, res) => {
