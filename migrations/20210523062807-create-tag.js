@@ -10,10 +10,11 @@ module.exports = {
       },
       tagname: {
         allowNull: false,
+        unique: true,
         type: Sequelize.STRING,
       },
       color: {
-        allowNull: false,
+        allowNull: true,
         type: Sequelize.STRING,
       },
       createdAt: {
