@@ -6,5 +6,5 @@ const checkTokenValid = require("../middlewares/checkTokenValid");
 router.post("/upload", checkTokenValid, controller.postTagsRes);
 router.patch("/update", checkTokenValid, controller.postTagsModify);
 router.delete("/delete", checkTokenValid, controller.postTagsDel);
-
+router.get("/:id", controller.postTagsGet);
 module.exports = router;
