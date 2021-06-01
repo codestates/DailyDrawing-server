@@ -1,6 +1,7 @@
 const { Drawing } = require("../../models");
+const { Comments } = require("../../models");
+const { DrawingsTag } = require("../../models");
 const fs = require("fs");
-const { response } = require("express");
 
 module.exports = async (req, res) => {
   const Users_id = res.userId;
@@ -11,8 +12,9 @@ module.exports = async (req, res) => {
   if (drawingPost) {
     try {
       const { DrawingImg } = drawingPost.dataValues;
-
-      drawingPost.destroy();
+      await Comments.destroy({ where: { Drawings_id: id } });
+      await DrawingsTag.destroy({ where: { Drawings_id: id } });
+      await drawingPost.destroy();
       fs.unlink(`./uploads/images/${DrawingImg}`, err => {
         if (err) res.status(400).send({ messsage: `${err}` });
       });
