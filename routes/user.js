@@ -5,6 +5,7 @@ const getProfileImg = require("../middlewares/profileImg");
 const checkTokenValid = require("../middlewares/checkTokenValid");
 
 router.get("/:id", controller.userGet);
+router.post("/checkpw", checkTokenValid, controller.checkUserPW);
 router.patch(
   "/updateProfileImg",
   checkTokenValid,
