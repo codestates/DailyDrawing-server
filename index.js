@@ -29,6 +29,7 @@ const likeRouter = require("./routes/like");
 const commentsRouter = require("./routes/comments");
 const tagRouter = require("./routes/tag");
 const drawingsTags = require("./routes/drawingsTags");
+const userRouter = require("./routes/user");
 
 app.use("/sign", signRouter);
 app.use("/drawing", drawingRouter);
@@ -36,6 +37,7 @@ app.use("/like", likeRouter);
 app.use("/comments", commentsRouter);
 app.use("/tag", tagRouter);
 app.use("/drawingsTags", drawingsTags);
+app.use("/user", userRouter);
 
 //응답 잘가는 지 확인
 app.get("/", (req, res) => {
