@@ -11,7 +11,7 @@ const storage = multer.diskStorage({
   destination: (req, file, cb) => {
     // 서버에 저장될 위치
 
-    cb(null, "uploads/profileImg");
+    cb(null, "uploads/profileImgs");
   },
   filename: (req, file, cb) => {
     // 서버에 저장될 때 파일 이름
@@ -21,6 +21,6 @@ const storage = multer.diskStorage({
 
 const uploadFile = multer({ storage: storage, fileFilter: imageFilter }).single(
   // 프론트에서 넘겨울 params key 값, 오른쪽 같이 넘겨줘야함-> {photo: binary}
-  "file"
+  "profile"
 );
 module.exports = uploadFile;
