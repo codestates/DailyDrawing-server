@@ -5,7 +5,12 @@ const getProfileImg = require("../middlewares/profileImg");
 const checkTokenValid = require("../middlewares/checkTokenValid");
 
 router.get("/:id", controller.userGet);
-router.patch("/update", checkTokenValid, getProfileImg, controller.userModify);
+router.patch(
+  "/updateProfileImg",
+  checkTokenValid,
+  getProfileImg,
+  controller.userProfileImgModify
+);
 router.delete("/delete", checkTokenValid, controller.userDel);
 
 module.exports = router;
