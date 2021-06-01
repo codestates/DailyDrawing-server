@@ -14,6 +14,5 @@ router.patch(
 );
 router.patch("/updatePW", checkTokenValid, controller.userPWModify);
 router.patch("/updateNick", checkTokenValid, controller.userNicknameModify);
-router.delete("/delete", checkTokenValid, controller.userDel);
 
 module.exports = router;
