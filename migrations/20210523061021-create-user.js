@@ -25,6 +25,7 @@ module.exports = {
       profileImg: {
         allowNull: true,
         type: Sequelize.STRING,
+        defaultValue: "profileImg00.png",
       },
       token: {
         type: Sequelize.STRING,
