@@ -3,5 +3,4 @@ module.exports = {
   drawingUpdate: require("./drawingUpdate"),
   drawingDelete: require("./drawingDelete"),
   drawingGet: require("./drawingGet"),
-  drawingGetAll: require("./drawingGetAll"),
 };
