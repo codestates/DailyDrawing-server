@@ -268,7 +268,7 @@ const drawingsMockup = [
   },
   {
     title: "시골 아담한 풍경",
-    DrawingImg: "image28.jpeg",
+    DrawingImg: "image28.jpg",
     description: "",
     isCompleted: true,
     Users_id: 6,
