@@ -30,6 +30,7 @@ const commentsRouter = require("./routes/comments");
 const tagRouter = require("./routes/tag");
 const drawingsTags = require("./routes/drawingsTags");
 const userRouter = require("./routes/user");
+const searchRouter = require("./routes/search");
 
 app.use("/sign", signRouter);
 app.use("/drawing", drawingRouter);
@@ -38,6 +39,7 @@ app.use("/comments", commentsRouter);
 app.use("/tag", tagRouter);
 app.use("/drawingsTags", drawingsTags);
 app.use("/user", userRouter);
+app.use("/search", searchRouter);
 
 //응답 잘가는 지 확인
 app.get("/", (req, res) => {
