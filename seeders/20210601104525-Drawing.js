@@ -96,7 +96,7 @@ const drawingsMockup = [
     updatedAt: new Date(),
   },
   {
-    title: "세로의 미학",
+    title: "세로의 미학",
     DrawingImg: "image09.jpeg",
     description: "",
     isCompleted: true,
@@ -420,7 +420,7 @@ const drawingsMockup = [
     updatedAt: new Date(),
   },
   {
-    title: "노르웨이의 숲",
+    title: "노르웨이의 숲",
     DrawingImg: "image45.jpg",
     description: "",
     isCompleted: true,
