@@ -8,14 +8,20 @@ module.exports = async (req, res) => {
   const Users_id = res.userId;
   const { title, description, isCompleted } = req.body;
   try {
-    await Drawing.create({
+    const data = await Drawing.create({
       title,
       DrawingImg,
       description,
       isCompleted,
       Users_id,
     });
-    res.status(200).send({ message: "Drawing post uploaded successful" });
+    console.log(data.dataValues);
+    res
+      .status(200)
+      .send({
+        id: data.dataValues.id,
+        message: "Drawing post uploaded successful",
+      });
   } catch (err) {
     res.status(500).send({ message: `${err.message}` });
   }
