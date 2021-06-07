@@ -15,7 +15,9 @@ module.exports = async (req, res) => {
         },
         { where: { id } }
       );
-      res.status(200).send({ message: "ProfileImg updated successful" });
+      res
+        .status(200)
+        .send({ profileImg, message: "ProfileImg updated successful" });
     } catch (err) {
       res.status(500).send({ message: `${err.message}` });
     }
